@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habiba Muhammed | Network Security Engineer &amp; SOC Analyst</title>
+  <meta name="description" content="Professional portfolio of Habiba Muhammed, a Network Security Engineer and SOC Analyst specializing in network security, cybersecurity operations, threat detection, security monitoring, and network analysis.">
+  <meta name="author" content="Habiba Muhammed">
+  <meta name="theme-color" content="#080810">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Habiba Muhammed | Network Security Engineer &amp; SOC Analyst">
+  <meta property="og:description" content="Professional portfolio of Habiba Muhammed, a Network Security Engineer and SOC Analyst specializing in network security, cybersecurity operations, threat detection, security monitoring, and network analysis.">
+  <meta property="og:image" content="assets/images/photo_٢٠٢٦-٠٦-٠٨_١٣-٥٩-٠٤.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Habiba Muhammed | Network Security Engineer &amp; SOC Analyst">
+  <meta name="twitter:description" content="Professional portfolio of Habiba Muhammed, a Network Security Engineer and SOC Analyst specializing in network security, cybersecurity operations, threat detection, security monitoring, and network analysis.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23080810' width='32' height='32' rx='6'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='14' font-family='monospace' fill='%23FF4FA3'%3EH/%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="cursor" id="cursor" hidden></div>
+  <div class="cursor-dot" id="cursorDot" hidden></div>
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+  <canvas id="networkCanvas" class="network-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Habiba Muhammed home">
+        <span class="logo-bracket">&lt;</span> HABIBA <span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home" data-section="home">Home</a>
+        <a href="#about" data-section="about">About</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#testimonials" data-section="testimonials">Testimonials</a>
+        <a href="#services" data-section="services">Services</a>
+        <a href="#contact" data-section="contact">Contact</a>
+        <a class="btn btn-cv nav-cv-mobile" href="assets/cv/Habiba_Mohamed_CV_ATS_Cybersecurity.pdf" download="Habiba_Muhammed_CV.pdf">Download CV</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+          <span class="theme-track" aria-hidden="true">
+            <span class="theme-thumb"></span>
+          </span>
+          <span class="theme-icon-sun" aria-hidden="true">☀</span>
+          <span class="theme-icon-moon" aria-hidden="true">☾</span>
+        </button>
+        <!-- CV path: update href if the file name or folder changes -->
+        <a class="btn btn-cv" id="downloadCv" href="assets/cv/Habiba_Mohamed_CV_ATS_Cybersecurity.pdf" download="Habiba_Mohamed_CV_ATS_Cybersecurity.pdf">Download CV</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-circuit" aria-hidden="true"></div>
+      <div class="hero-radial" aria-hidden="true"></div>
+      <div class="binary-layer" id="binaryLayer" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">NETWORK SECURITY • SOC • CYBERSECURITY</p>
+          <h1>
+            <span class="hello">Hello, I'm</span>
+            <span class="name">Habiba Muhammed</span>
+          </h1>
+          <p class="hero-title">Senior Network Security Engineer &amp; SOC Analyst</p>
+          <p class="typed-line" aria-live="polite">
+            <span class="typed-prefix">Role:</span>
+            <span id="typedRole">Network Security Engineer</span><span class="caret" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-desc">
+            A cybersecurity-focused engineer passionate about securing networks, analyzing security events, detecting threats, and building resilient infrastructure. I combine networking fundamentals with security analysis to understand, monitor, and defend modern digital environments.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Work</a>
+            <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+          </div>
+          <div class="socials" aria-label="Social profiles">
+            <a href="https://www.facebook.com/share/1V55ZkPjYv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/habiba-muhammed-5b7353290?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.5 9H3v12h3.5V9zM4.8 3C3.5 3 2.5 4 2.5 5.2S3.5 7.4 4.8 7.4 7 6.4 7 5.2 6 3 4.8 3zM21 14.3c0-3.5-1.9-5.1-4.4-5.1-2 0-2.9 1.1-3.4 1.9V9H10v12h3.5v-6.7c0-1.8.3-3.5 2.5-3.5s2.2 2 2.2 3.6V21H21v-6.7z"/></svg>
+            </a>
+            <a href="https://github.com/habibamuhh22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.9 9.6.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.6-.3 2.4-.3s1.6.1 2.4.3c2-.1.3 2.8 2.8 1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.6C22 6.6 17.5 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-stage">
+            <div class="orbit-ring" aria-hidden="true"></div>
+        
+            <div class="profile-frame">
+              <!-- Replace assets/images/profile.jpg with your photo -->
+              <img src="assets/images/photo_٢٠٢٦-٠٦-٠٨_١٣-٥٩-٠٤.jpg" alt="Professional portrait of Habiba Muhammed" width="420" height="420">
+            </div>
+          </div>
+
+          <!-- Visual portfolio element only — not live monitoring -->
+         
+
+         
+
+      <a class="scroll-indicator" href="#about">
+        <span>SCROLL TO EXPLORE</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 16l-6-6h12z"/></svg>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-frame">
+            <div class="about-glass" aria-hidden="true"></div>
+            <!-- Replace assets/images/about.jpg with a second professional photo -->
+            <img src="assets/images/photo_٢٠٢٦-٠٦-٠٨_١٣-٥٩-٠٤.jpg" alt="Habiba Muhammed in a professional setting" width="520" height="680">
+            <div class="about-deco" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <p class="section-label">WHO I AM</p>
+          <h2>About Me</h2>
+          <p>
+            I'm Habiba Muhammed, a Network Security Engineer and SOC Analyst with a strong interest in network infrastructure, cybersecurity operations, threat detection, and security analysis. I enjoy understanding how networks operate, identifying potential security risks, analyzing suspicious activity, and developing practical solutions that improve the security and reliability of digital environments.
+          </p>
+          <p>
+            My goal is to continuously develop my technical expertise across networking and cybersecurity while building practical experience through hands-on labs, security projects, and real-world problem solving.
+          </p>
+          <div class="highlight-grid">
+            <article class="highlight-card glass">
+              <span>01</span>
+              <h3>Network Security</h3>
+            </article>
+            <article class="highlight-card glass">
+              <span>02</span>
+              <h3>SOC Analysis</h3>
+            </article>
+            <article class="highlight-card glass">
+              <span>03</span>
+              <h3>Threat Detection</h3>
+            </article>
+            <article class="highlight-card glass">
+              <span>04</span>
+              <h3>Network Infrastructure</h3>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <p class="section-label reveal">ACADEMIC PATH</p>
+        <h2 class="reveal">Education</h2>
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <div class="timeline-node" aria-hidden="true"></div>
+            <div class="timeline-card glass">
+              <div class="edu-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zm0 12.2L4.7 11 12 7l7.3 4L12 15.2zM5 13.5V17c0 2 3.1 3.5 7 3.5s7-1.5 7-3.5v-3.5l-7 3.8-7-3.8z"/></svg>
+              </div>
+              <p class="meta">2022 – 2027</p>
+              <h3>B.Sc. in Communication and Electronics Engineering</h3>
+              <ul>
+                <li>Department of Communications and Electronics Engineering</li>
+                <li>Faculty of Engineering, Beni-Suef University</li>
+                <li>Grade: Very Good</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <!--
+      EDIT EXPERIENCE HERE.
+      Do not invent companies or job titles.
+      Duplicate .exp-card blocks when adding real internships or roles.
+      Suggested fields: company, dates, location, responsibilities.
+    -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-label reveal">PRACTICAL FOCUS</p>
+        <h2 class="reveal">Experience &amp; Practical Training</h2>
+        <div class="exp-grid">
+          <article class="exp-card glass reveal">
+            <p class="meta">Hands-on development</p>
+            <h3>Network Security &amp; SOC Training</h3>
+            <p>Structured practice covering defensive operations and analysis workflows.</p>
+            <ul class="chip-list">
+              <li>Network Security</li>
+              <li>SOC Operations</li>
+              <li>Security Monitoring</li>
+              <li>Log Analysis</li>
+              <li>Threat Detection</li>
+              <li>Incident Analysis</li>
+            </ul>
+          </article>
+          <article class="exp-card glass reveal">
+            <p class="meta">Lab environments</p>
+            <h3>Technical Labs &amp; Hands-on Practice</h3>
+            <p>Networking and security labs used to build operational fluency.</p>
+            <ul class="chip-list">
+              <li>Routing &amp; Switching</li>
+              <li>VLANs</li>
+              <li>ACLs</li>
+              <li>Firewalls</li>
+              <li>Network Troubleshooting</li>
+              <li>Security Monitoring</li>
+              <li>Virtual Lab Environments</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-label reveal">CAPABILITY MAP</p>
+        <h2 class="reveal">Skills Constellation</h2>
+        <div class="skills-constellation">
+          <article class="skill-node glass reveal">
+            <h3>Networking</h3>
+            <ul>
+              <li>TCP/IP</li>
+              <li>Routing &amp; Switching</li>
+              <li>VLAN</li>
+              <li>OSPF</li>
+              <li>STP</li>
+              <li>NAT</li>
+              <li>ACL</li>
+              <li>Network Troubleshooting</li>
+            </ul>
+          </article>
+          <article class="skill-node glass reveal">
+            <h3>Network Security</h3>
+            <ul>
+              <li>Firewalls</li>
+              <li>Network Segmentation</li>
+              <li>Access Control</li>
+              <li>VPN Concepts</li>
+              <li>Security Policies</li>
+              <li>Traffic Analysis</li>
+            </ul>
+          </article>
+          <article class="skill-node glass reveal">
+            <h3>SOC &amp; Cybersecurity</h3>
+            <ul>
+              <li>SOC Analysis</li>
+              <li>Log Analysis</li>
+              <li>Security Monitoring</li>
+              <li>Threat Detection</li>
+              <li>Incident Detection</li>
+              <li>Incident Response</li>
+              <li>IOC Analysis</li>
+              <li>SIEM Fundamentals</li>
+            </ul>
+          </article>
+          <article class="skill-node glass reveal">
+            <h3>Tools</h3>
+            <ul>
+              <li>Cisco Packet Tracer</li>
+              <li>GNS3</li>
+              <li>VMware</li>
+              <li>FortiGate</li>
+              <li>FortiAnalyzer</li>
+              <li>FortiSIEM</li>
+              <li>Wireshark</li>
+              <li>TryHackMe</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <!-- Edit project data in the data-* attributes and modal content below -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-label reveal">SELECTED WORK</p>
+        <h2 class="reveal">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card tilt reveal" data-project="p1">
+            <div class="project-media">
+            
+              <div class="project-overlay">
+                <span>View details</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="meta">PROJECT 01</p>
+              <h3>Network Security Infrastructure</h3>
+              <p>A practical network infrastructure project focused on routing, switching, VLANs, network segmentation, ACLs, and secure communication.</p>
+              <ul class="tech-tags">
+                <li>Cisco Packet Tracer</li>
+                <li>Routing</li>
+                <li>Switching</li>
+                <li>VLAN</li>
+                <li>ACL</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" data-project="p2">
+            <div class="project-media">
+              
+              <div class="project-overlay">
+                <span>View details</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="meta">PROJECT 02</p>
+              <h3>SOC Monitoring &amp; Security Analysis Lab</h3>
+              <p>A cybersecurity lab focused on security events, log analysis, threat detection, monitoring, and SOC investigation concepts.</p>
+              <ul class="tech-tags">
+                <li>SOC</li>
+                <li>Log Analysis</li>
+                <li>SIEM</li>
+                <li>Threat Detection</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" data-project="p3">
+            <div class="project-media">
+         
+              <div class="project-overlay">
+                <span>View details</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="meta">PROJECT 03</p>
+              <h3>Firewall Security Lab</h3>
+              <p>A practical firewall environment focused on traffic control, NAT, access control, network security, and troubleshooting.</p>
+              <ul class="tech-tags">
+                <li>FortiGate</li>
+                <li>Firewall</li>
+                <li>NAT</li>
+                <li>ACL</li>
+              </ul>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" data-project="p4">
+            <div class="project-media">
+            
+              <div class="project-overlay">
+                <span>View details</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="meta">PROJECT 04</p>
+              <h3>Network Troubleshooting Lab</h3>
+              <p>A practical networking environment involving routing, DNS, HTTP connectivity, troubleshooting, and packet analysis.</p>
+              <ul class="tech-tags">
+                <li>Cisco</li>
+                <li>GNS3</li>
+                <li>Packet Tracer</li>
+                <li>Wireshark</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <!--
+      Replace placeholder testimonials with real quotes when available.
+      Fields: quote, name, role, company, initials (or add an img src).
+      Do not invent people or companies.
+    -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <p class="section-label reveal">RECOMMENDATIONS</p>
+        <h2 class="reveal">Testimonials</h2>
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <article class="testimonial glass" data-slide="0">
+              <p class="quote">“Your professional testimonial will appear here.”</p>
+              <div class="person">
+                <div class="avatar" aria-hidden="true">A</div>
+                <div>
+                  <strong>Name</strong>
+                  <span>Position · Company</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial glass" data-slide="1" hidden>
+              <p class="quote">“Your professional testimonial will appear here.”</p>
+              <div class="person">
+                <div class="avatar" aria-hidden="true">B</div>
+                <div>
+                  <strong>Name</strong>
+                  <span>Position · Company</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial glass" data-slide="2" hidden>
+              <p class="quote">“Your professional testimonial will appear here.”</p>
+              <div class="person">
+                <div class="avatar" aria-hidden="true">C</div>
+                <div>
+                  <strong>Name</strong>
+                  <span>Position · Company</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" id="prevSlide" aria-label="Previous testimonial">‹</button>
+            <div class="dots" id="carouselDots"></div>
+            <button type="button" id="nextSlide" aria-label="Next testimonial">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="section-label reveal">WHAT I OFFER</p>
+        <h2 class="reveal">Services</h2>
+        <div class="services-grid">
+          <article class="service-card glass reveal">
+            <span class="svc-num">01</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9.5C7.4 20.4 4 17 4 12V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Network Security</h3>
+            <p>Secure network architecture, access control, segmentation, and security-focused configurations.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <span class="svc-num">02</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M8 8h8M8 12h5"/></svg>
+            </div>
+            <h3>SOC Analysis</h3>
+            <p>Security event monitoring, log analysis, suspicious activity investigation, and threat detection.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <span class="svc-num">03</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 14c4-8 12-8 16 0"/><circle cx="12" cy="16" r="2"/><path d="M12 4v4"/></svg>
+            </div>
+            <h3>Network Monitoring</h3>
+            <p>Traffic analysis and identification of unusual network behavior.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <span class="svc-num">04</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+            <h3>Security Assessment</h3>
+            <p>Reviewing configurations and identifying potential security weaknesses.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <span class="svc-num">05</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+            </div>
+            <h3>Network Troubleshooting</h3>
+            <p>Troubleshooting routing, DNS, connectivity, firewall, and communication issues.</p>
+          </article>
+          <article class="service-card glass reveal">
+            <span class="svc-num">06</span>
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 10a4 4 0 118 0c0 4-4 5-4 8"/><circle cx="12" cy="21" r="1"/></svg>
+            </div>
+            <h3>Cybersecurity Consulting</h3>
+            <p>Technical guidance related to networking and cybersecurity environments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="cta-band" id="cta">
+      <div class="container cta-inner reveal">
+        <h2>Let's Secure the Future Together</h2>
+        <p>Have a project, opportunity, or cybersecurity challenge in mind? Let's connect and build secure, reliable digital environments together.</p>
+        <a class="btn btn-primary" href="#contact">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="section-label">GET IN TOUCH</p>
+          <h2>Contact</h2>
+          <p>Based in Beni-Suef, Egypt. Open to internships, SOC and network security roles, and collaboration.</p>
+          <ul class="info-list">
+            <li>
+              <span>Location</span>
+              <strong>Beni-Suef, Egypt</strong>
+            </li>
+            <li>
+              <span>Email</span>
+              <!-- Replace the email below -->
+              <a id="contactEmail" href="biba08853@gmail.com">biba08853@gmail.com</a>
+            </li>
+          </ul>
+          <div class="socials">
+            <a href="https://www.facebook.com/share/1V55ZkPjYv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/habiba-muhammed-5b7353290?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.5 9H3v12h3.5V9zM4.8 3C3.5 3 2.5 4 2.5 5.2S3.5 7.4 4.8 7.4 7 6.4 7 5.2 6 3 4.8 3zM21 14.3c0-3.5-1.9-5.1-4.4-5.1-2 0-2.9 1.1-3.4 1.9V9H10v12h3.5v-6.7c0-1.8.3-3.5 2.5-3.5s2.2 2 2.2 3.6V21H21v-6.7z"/></svg>
+            </a>
+            <a href="https://github.com/habibamuhh22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.9 9.6.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.6-.3 2.4-.3s1.6.1 2.4.3c2-.1.3 2.8 2.8 1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.6C22 6.6 17.5 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <!-- Connect this form to an API later (e.g. Formspree, EmailJS, or a custom endpoint) in js/script.js -->
+          <label>
+            Full Name
+            <input type="text" name="name" id="name" autocomplete="name" required>
+            <span class="field-error" data-for="name"></span>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" id="email" autocomplete="email" required>
+            <span class="field-error" data-for="email"></span>
+          </label>
+          <label>
+            Subject
+            <input type="text" name="subject" id="subject" required>
+            <span class="field-error" data-for="subject"></span>
+          </label>
+          <label>
+            Message
+            <textarea name="message" id="message" rows="5" required></textarea>
+            <span class="field-error" data-for="message"></span>
+          </label>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="logo">
+          <span class="logo-bracket">&lt;</span> HABIBA <span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
+        </a>
+        <p>Senior Network Security Engineer &amp; SOC Analyst</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="socials">
+        <a href="https://www.facebook.com/share/1V55ZkPjYv/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/habiba-muhammed-5b7353290?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.5 9H3v12h3.5V9zM4.8 3C3.5 3 2.5 4 2.5 5.2S3.5 7.4 4.8 7.4 7 6.4 7 5.2 6 3 4.8 3zM21 14.3c0-3.5-1.9-5.1-4.4-5.1-2 0-2.9 1.1-3.4 1.9V9H10v12h3.5v-6.7c0-1.8.3-3.5 2.5-3.5s2.2 2 2.2 3.6V21H21v-6.7z"/></svg>
+        </a>
+        <a href="https://github.com/habibamuhh22" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.9 9.6.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.6-.3 2.4-.3s1.6.1 2.4.3c2-.1.3 2.8 2.8 1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.9-5.1 6.9-9.6C22 6.6 17.5 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Habiba Muhammed. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Project modal -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel glass" role="document">
+      <button class="modal-close" type="button" data-close="true" aria-label="Close project details">×</button>
+      <img id="modalImage" alt="" width="900" height="480">
+      <p class="meta" id="modalMeta"></p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <h4>Key features</h4>
+      <ul id="modalFeatures"></ul>
+      <h4>Technologies</h4>
+      <ul class="tech-tags" id="modalTech"></ul>
+      <a class="btn btn-ghost" id="modalGithub" href="#" rel="noopener noreferrer">GitHub link coming soon</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
